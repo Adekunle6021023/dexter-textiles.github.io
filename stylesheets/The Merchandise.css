@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+/****************
+   NAVIGATION
+ ***************/
+
+.main-header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    background-color: #e256e7;
+    padding: 0.75rem;
+}
+
+.main-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.main-nav-bar li{
+    padding: 0.5rem;
+}
+
+.main-nav-bar a {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.main-nav-bar-logo {
+    position: relative;
+    font-size: 50px;
+    font-family: "Agency FB";
+    color: rgb(230, 212, 233);
+    line-height: 1;
+    text-shadow: 1px 5px 20px rgb(131, 3, 3);
+    animation-name: mainlogoanimation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+@keyframes mainlogoanimation {
+    0%{top: -100px;}
+    100%{top: 0px;}
+}
+
+.main-nav-bar .main-nav-bar-logo:hover {
+   transform: rotateY(360deg);
+}
+
+.main-nav-list {
+    position: relative;
+    display: flex;
+    text-align: center;
+    padding : 1.25rem;
+    list-style: none;
+    animation-name: main-nav-list-animation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes main-nav-list-animation {
+    0%{left: -1000px;}
+    100%{left: 0;}
+}
+
+.main-nav-list a {
+    text-decoration: none;
+    margin: 0.75rem;
+    padding: 0.75rem;
+}
+
+.main-nav-list a:hover {
+     color: #e256e7;
+    background-color: #faebd7;
+    border-bottom: #e256e7 solid 2px;
+}
+
+.main-nav-list .current-page {
+    border-bottom: #faebd7 solid 1px;
+    padding-bottom: 0.1rem;
+}
+
+.aux-nav-bar {
+    position: relative;
+}
+
+.aux-nav-list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding : 1.25rem;
+    list-style: none;
+    margin: 0.75rem;
+}
+
+.aux-nav-list li {
+    margin: 0.65rem;
+}
+
+.aux-nav-list a {
+    text-decoration: none;
+    border: #e256e7 solid 1px;
+    border-radius: 15px;
+    color: #e256e7;
+    padding:0.5rem 1rem 0.5rem 1rem;
+    margin: 0.75rem;
+}
+
+.aux-nav-list a:hover {
+    background-color: #e256e7;
+    color: #faebd7;
+}
+
+.aux-current-page {
+    background-color: #e256e7;
+}
+
+.product-showcase-section {
+    display: flex;
+    align-content: space-around;
+    margin-bottom: auto;
+}
+
+.main-product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.showcase-container-main-header {
+    background-color: #e256e7;
+    color: #faebd7;
+    padding: 2.50rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.main-product-container img{
+    border: #e256e7 solid 1px;
+    margin: 1rem;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e256e7
+}
+
+.main-footer-text {
+    font-weight: bold;
+    font-style: italic;
+    color: #faebd7;
+}
+
+/**********************
+MEDIA QUERIES
+**********************/
+
+/*FOR TABLETS*/
+@media screen and (max-width: 786px){
+    .main-nav-bar {
+        display: block;
+        text-align: center;
+    }
+
+    .main-nav-list{
+        justify-content: center;
+    }
+
+}
+
+/*FOR MOBILE SCREENS*/
+@media screen and (max-width: 551px){
+    .main-nav-list{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main-nav-list a {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 516px){
+    .aux-nav-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: auto;
+        flex: 1;;
+    }
+}
+
+@media screen and (max-width: 260px){
+    .main-product-container img {
+        width: 60%;
+    }
+}
